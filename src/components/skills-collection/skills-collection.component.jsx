@@ -8,13 +8,20 @@ import SKILLS_DATA from './skills-data'
 
 const SkillsCollection = () => {
     const { skills } = SKILLS_DATA;
+    console.log(skills);
+    // const handleClick = url => {
+    //     console.log(url);
+    //     // window.location.assign(url)
+    // }
     return (
         <Container>
             <Row>
                 {
-                    skills.map(({ imageUrl, title, uid }) => 
-                        <Col sm={12} md={4} lg={3}>
-                            <SkillItem key={uid} imageUrl={imageUrl} title={title}/>
+                    skills.map(({ imageUrl, title, uid, url }) =>
+                        <Col /*onClick={(url) => handleClick(url)}*/ className='skill-col' sm={12} md={4} lg={3}>
+                            <a href={url} target="_blank" rel="noopener noreferrer"> 
+                                <SkillItem key={uid} imageUrl={imageUrl} title={title}/>
+                            </a>
                         </Col>
                     )
                 }
