@@ -1,4 +1,5 @@
 .about-page{
+    height: 100vw;
     font-family: Raleway;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,10 +12,6 @@
     // display: flex;
     // flex-direction: row;
 
-    .heading-text{
-        margin-top: 5vw;
-    }
-
     hr{
         border: 0;
         height: 1px;
@@ -24,16 +21,44 @@
     }
 
     .about-nav{
+        margin-top: 100px;
        padding-top: 10px; 
        font-size: 20px;
        display: flex;
        justify-content: center;
+
+    }
+    
+    .container{
+        position: relative;
+    }
+    
+    .page{
+        padding: 0 50px;
+        position: absolute;
+        margin-top: 5vw;
     }
 
-    
+    .page-enter{
+        opacity: 0;
+        transform: scale(1.1);
+    }
 
-    .skills{
-        margin-top: 60px;
+    .page-enter-active{
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 300ms, transform 300ms;
+    }
+
+    .page-exit{
+        opacity: 1;
+        transform: scale(0.9);
+    }
+    
+    .page-exit-active{
+        opacity: 0;
+        transform: scale(1);
+        transition: opacity 300ms, transform 300ms;
     }
     
     .heading{

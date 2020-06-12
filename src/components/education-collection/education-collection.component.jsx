@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Slide } from 'react-reveal';
 
 import './education-collection.styles.scss';
 
@@ -16,7 +17,9 @@ const EducationCollection = () => {
                 {
                     education.map(item => 
                         <Col lg={12} className='education-item'>
+                            <Slide left>
                             <EducationItem key={item.uid} educationItem={item}/>
+                            </Slide>
                         </Col>
                     )
                 }

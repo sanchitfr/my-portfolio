@@ -1,55 +1,95 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
+import { BrowserRouter as Router,Route, NavLink } from 'react-router-dom';
+import { CSSTransition } from 'react-transition-group'
 
 import './about-page.styles.scss';
 
-import AboutNavigation from '../../components/vertical-nav/vertical-nav.component';
-import SkillsCollection from '../../components/skills-collection/skills-collection.component';
-import EducationCollection from '../../components/education-collection/education-collection.component';
+// import AboutNavigation from '../../components/vertical-nav/vertical-nav.component';
+import About from '../../components/about/about.component';
+import Skills from '../../components/skills/skills.component';
+import Education from '../../components/education/education.component';
+import Hobbies from '../../components/hobbies/hobbies.component';
 
-const AboutPage = () => (
+const AboutPage = () =>{ 
+    
+//     const [navBackground, setNavBackground] = useState(false);
+
+//   const navRef = useRef();
+//   navRef.current = navBackground;
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const show = window.scrollY > 500;
+//       if(navRef.current !== show){
+//         setNavBackground(show);
+//       }
+//     }
+//     document.addEventListener('scroll', handleScroll);
+//     return () => {
+//       document.removeEventListener('scroll', handleScroll);
+//     }
+//   });
+
+  const routes = [
+      {path : '/about', name:'About', Component:About},
+      {path : '/skills', name:'Skills', Component:Skills},
+      {path : '/education', name:'Education', Component:Education},
+      {path : '/hobbies', name:'Hobbies', Component:Hobbies}
+  ]
+
+    return(
         <Container fluid className='about-page'>
             <Row xs={1}>
-                <Col className='heading-text'>
-                    <div className='heading'>About Me</div>
-                    <span>I am a tech enthusiast and a web developer with focus on making good looking, efficient web apps with DRY, 
-                        reusable and readable code. Ever since  I started coding, I saw the amazing websites people made and published
-                        and I always wanted to learn the art of making websites. This curiosity pushed me to learn web development, so 
-                        I picked up some courses and started learning! </span>
-                </Col>
+                <Router>
                 <Col className='about-nav'>
-                    <AboutNavigation/>
+                    {
+                        routes.map( route =>(
+                            <Navbar variant="light">
+                                <Nav>
+                                    <Nav.Link 
+                                        key={route.path}
+                                        as={NavLink}
+                                        to={route.path}
+                                        activeClassName='active'
+                                        exact>
+                                    {route.name}
+                                    </Nav.Link>
+                                </Nav>
+                            </Navbar>
+                        ))
+                    }
                 </Col>
+                <Container className="container">
+                    {
+                        routes.map(({path, Component}) => (
+                            <Route key={path} exact path={path}>
+                                {
+                                    (({match}) =>(
+                                        <CSSTransition
+                                        in={match != null}
+                                        timeout={300}
+                                        classNames="page"
+                                        unmountOnExit
+                                        >
+                                            <div className='page'>
+                                                <Component/>
+                                            </div>
+                                        </CSSTransition>
+                                    ))
+                                }
+                            </Route>
+                        ))
+                    }
+                </Container>
                 <hr/>
-                <Col className='skills'>
-                    {/* <a name="#skills"/> */}
-                    <div className='heading'>Skills</div>
-                    <span> I started learning web development from a course which taught it from scratch, HTML elements, css classes and IDs,
-                        javaScript DOM manipulation and event listeners etc. We made a full fledged Yelp-like application complete with user login,
-                        authentication and commenting system. After that I did two more courses in JavaScript and React.js and learnt the following
-                        skills.     
-                    </span>
-                    <SkillsCollection/>
-                </Col>
-            </Row>
-            <Row>
-                <Col className='education'>
-                    <div className='heading'>Education</div>
-                    <span> I started learning web development from a course which taught it from scratch, HTML elements, css classes and IDs,
-                        javaScript DOM manipulation and event listeners etc. We made a full fledged Yelp-like application complete with user login,
-                        authentication and commenting system. After that I did two more courses in JavaScript and React.js and learnt the following
-                        skills.     
-                    </span>
-                    <Col>
-                        <EducationCollection/>  
-                    </Col>
-                </Col>
+                </Router>
             </Row>
         </Container>
         // <div className='vertical-nav'>
         // </div>
         // <Container className='body-container'>
         // </Container>
-);
+    )
+};
 
 export default AboutPage;

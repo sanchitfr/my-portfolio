@@ -1,0 +1,13 @@
+.review-item{
+    display : flex;
+    flex-direction: column;
+    justify-content: left;
+    i{
+        margin-bottom: 10px;
+        font-size: 25px;
+    }
+    p{
+        justify-content: right;
+        font-size: 15px;
+    }
+}

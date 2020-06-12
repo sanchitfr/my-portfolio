@@ -13,6 +13,7 @@ const ReviewPage = ({reviewStart}) => {
         username : '',
         reviewDetail : ''
     });
+
     
     const { username, reviewDetail } = review;
 
@@ -61,7 +62,7 @@ const ReviewPage = ({reviewStart}) => {
                     <Col sm={10}>
                     <Form.Control 
                         as="input"
-                        type="text" 
+                        type="textbox" 
                         placeholder="Let me know what you think!" 
                         name="reviewDetail"
                         value={reviewDetail}
@@ -78,7 +79,6 @@ const ReviewPage = ({reviewStart}) => {
                 </Form.Group>
             </Form>
             <div>
-                hello from review page
                 <ReviewsCollection/>
             </div>        
         </Container>

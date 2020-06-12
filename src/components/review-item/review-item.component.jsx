@@ -4,10 +4,11 @@ import './review-item.styles.scss';
 
 const ReviewItem = ({name, review, time}) => (
     // console.log(reviewDat)
-    <div>
-        <span>{name} said {review}</span>
+    <blockquote className='review-item'>
+        <i>{review}</i>
+        <p>{name}</p>
         <span>{time}</span>
-    </div>
+    </blockquote>
 );
 
 export default ReviewItem;

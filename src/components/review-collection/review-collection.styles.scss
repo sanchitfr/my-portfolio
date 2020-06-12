@@ -1,0 +1,10 @@
+.review-list{
+    cursor: default;
+    .review-list-item{
+        transition: transform 0.4s;
+        margin: 20px 0;
+        &:hover{
+            transform : scale(1.1);
+        }
+    }
+}

@@ -8,7 +8,6 @@ import SKILLS_DATA from './skills-data'
 
 const SkillsCollection = () => {
     const { skills } = SKILLS_DATA;
-    console.log(skills);
     // const handleClick = url => {
     //     console.log(url);
     //     // window.location.assign(url)

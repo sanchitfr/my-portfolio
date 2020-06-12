@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import firebase from 'firebase/app';
 import {  ListGroup } from 'react-bootstrap';
 
@@ -9,7 +9,8 @@ import ReviewItem from '../review-item/review-item.component';
 const ReviewsCollection = () => {
     
     const [reviews, setReviews] = useState([]);
-    const retrieveReviews = () => {
+
+    useEffect(() => {
         const db = firebase.firestore();
         db.collection("reviews")
         .get().then(querySnapshot => {
@@ -17,31 +18,16 @@ const ReviewsCollection = () => {
             console.log("data", data)
             setReviews(data);
         });
-    }
-    if(reviews.length === 0){
-        retrieveReviews();
-    }
+    },[]);
     console.log("outside", reviews);
-    // const allReviews = ( () => {
-        //     return retrieveReviews();
-        // })();
-        // allReviews.then(x => {
-            //     //   reviews = x;
-            //     setReviews(x)
-            //     // x.map( review => {
-                //     //     console.log(review);
-                //     // });
-                // });
-                // // const { reviews } = themReviews;
-                //   console.log("after then", themReviews);
     return (
         <div>
-            <ListGroup variant='flush'>
+            <ListGroup className='review-list'>
                 {
                     // console.log("inside return", reviews)
                     // retrieveReviews().then(reviews => {
                         reviews.map(curr =>
-                            <ListGroup.Item md={12}>
+                            <ListGroup.Item className='review-list-item' md={12}>
                                 <ReviewItem review={curr.review} name={curr.name}/>                                              
                             </ListGroup.Item>                 
                         )              
