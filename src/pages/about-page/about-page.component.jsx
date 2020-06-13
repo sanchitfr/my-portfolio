@@ -6,6 +6,7 @@ import { CSSTransition } from 'react-transition-group'
 import './about-page.styles.scss';
 
 // import AboutNavigation from '../../components/vertical-nav/vertical-nav.component';
+import ContactLinkButtons from '../../components/contact-link-buttons/contact-link-buttons.component';
 import About from '../../components/about/about.component';
 import Skills from '../../components/skills/skills.component';
 import Education from '../../components/education/education.component';
@@ -38,7 +39,9 @@ const AboutPage = () =>{
   ]
 
     return(
-        <Container fluid className='about-page'>
+        <div className='about-page'>
+        <ContactLinkButtons/>
+        <Container fluid >
             <Row xs={1}>
                 <Router>
                 <Col className='about-nav'>
@@ -85,6 +88,7 @@ const AboutPage = () =>{
                 </Router>
             </Row>
         </Container>
+        </div>
         // <div className='vertical-nav'>
         // </div>
         // <Container className='body-container'>

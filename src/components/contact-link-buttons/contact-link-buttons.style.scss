@@ -1,0 +1,39 @@
+.contact-link-buttons{
+    display: flex;
+    flex-direction: column;
+    padding-top: 150px;
+    margin-left: 0;
+    padding-left: 0;
+}
+.btns{
+    // display: block;
+    width: 40px;
+    height: 40px;
+    transition : 300ms ease;
+    border: none;
+    outline: none;
+    padding: 10px;
+    display: block;
+    cursor: pointer;
+    color: black;
+    // margin: 0;
+    // padding: 0;         
+}
+
+.btns:hover{
+    width: 50px;
+    color: black;
+}
+
+.linkedin{
+    background-color: #0072b1;
+}
+
+.gmail{
+    background-color: #D44638;
+}
+
+.github{
+    border: 0.5px solid black;
+    background-color: white;
+}
