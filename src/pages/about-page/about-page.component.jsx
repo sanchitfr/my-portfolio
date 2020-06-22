@@ -40,11 +40,12 @@ const AboutPage = () =>{
 
     return(
         <div className='about-page'>
-        <ContactLinkButtons/>
-        <Container fluid >
-            <Row xs={1}>
-                <Router>
-                <Col className='about-nav'>
+            <Router>
+            <Row className='first-row'>
+                <Col sm={1}>
+                    <ContactLinkButtons className="contact-link"/>
+                </Col>
+                <Col sm={1} className='about-nav'>
                     {
                         routes.map( route =>(
                             <Navbar variant="light">
@@ -61,7 +62,9 @@ const AboutPage = () =>{
                             </Navbar>
                         ))
                     }
+                <hr/>
                 </Col>
+                <Col sm={10}>
                 <Container className="container">
                     {
                         routes.map(({path, Component}) => (
@@ -84,10 +87,9 @@ const AboutPage = () =>{
                         ))
                     }
                 </Container>
-                <hr/>
-                </Router>
+                </Col>
             </Row>
-        </Container>
+            </Router>
         </div>
         // <div className='vertical-nav'>
         // </div>

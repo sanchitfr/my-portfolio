@@ -1,0 +1,20 @@
+.gallery-collection{
+    margin: 0;
+    margin-top: 20px;
+
+    .carousel-images{
+        height: 80vh;
+    }
+    
+    .images{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+        // position: relative;
+        margin-top: 100px;
+        .image-col{
+            float: left;
+        }
+    }
+   
+}

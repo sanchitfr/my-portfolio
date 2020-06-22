@@ -1,5 +1,8 @@
+
 .about-page{
-    height: 100vw;
+    height: 100%;
+    // width: 100%;
+    // overflow: hidden;
     font-family: Raleway;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,6 +15,13 @@
     // display: flex;
     // flex-direction: row;
 
+
+    .contact-link{
+        padding-left: 0;
+        padding-top: 30px;
+        overflow: hidden;
+    }
+
     hr{
         border: 0;
         height: 1px;
@@ -21,12 +31,17 @@
     }
 
     .about-nav{
-        margin-top: 100px;
-       padding-top: 10px; 
+        padding: 0;
        font-size: 20px;
        display: flex;
+       flex-direction: column !important;
+       color: black;
        justify-content: center;
 
+    }
+
+    .first-row{
+        height: 100%;
     }
     
     .container{

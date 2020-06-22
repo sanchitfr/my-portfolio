@@ -6,7 +6,7 @@ import { Navbar, Nav } from 'react-bootstrap';
 
 const NavbarComponent = () => (
     <div>
-        <Navbar className='navbar-custom' variant='dark' fixed='top' expand='md'>
+        <Navbar className='navbar-custom' variant='light' fixed='top' expand='md'>
             <Navbar.Brand href="#home">
             {/* <img
                 alt=""
@@ -22,7 +22,7 @@ const NavbarComponent = () => (
                     <Nav.Link href='/reviews'><span>Write a review</span></Nav.Link>
                     <Nav.Link href='#'><span>Projects</span></Nav.Link>
                     <Nav.Link href='#'><span>Contact</span></Nav.Link>
-                    <Nav.Link href='#'><span>Gallery</span></Nav.Link>
+                    <Nav.Link href='/gallery'><span>Gallery</span></Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

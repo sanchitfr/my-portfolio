@@ -10,6 +10,7 @@ import NavbarComponent from './components/navbar/navbar.component';
 import HomePage from './pages/homepage/homepage.component';
 import AboutPage from './pages/about-page/about-page.component';
 import ReviewPage from './pages/review-page/review-page.component';
+import GalleryPage from './pages/gallery-page/gallery.component';
 
 const App = () => {
 
@@ -68,7 +69,8 @@ const App = () => {
         </Container> */}
           <Route exact path='/' component={HomePage}/>
           <Route path='/about' component={AboutPage}/>
-          <Route path='/reviews' component={ReviewPage}/> */}
+          <Route path='/reviews' component={ReviewPage}/> 
+          <Route path='/gallery' component={GalleryPage}/>
         </Switch>
       </Router>
     </div>
