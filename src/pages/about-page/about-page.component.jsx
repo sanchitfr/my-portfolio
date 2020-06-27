@@ -12,7 +12,7 @@ import Skills from '../../components/skills/skills.component';
 import Education from '../../components/education/education.component';
 import Hobbies from '../../components/hobbies/hobbies.component';
 
-const AboutPage = () =>{ 
+const AboutPage = (darkMode) =>{ 
     
 //     const [navBackground, setNavBackground] = useState(false);
 
@@ -48,7 +48,7 @@ const AboutPage = () =>{
                 <Col sm={1} className='about-nav'>
                     {
                         routes.map( route =>(
-                            <Navbar variant="light">
+                            <Navbar variant={darkMode ? "light" : "dark"}>
                                 <Nav>
                                     <Nav.Link 
                                         key={route.path}

@@ -1,6 +1,15 @@
 html, body, #app, #app>div {
   height: 100%
 }
+body.light-mode {
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+body.dark-mode {
+  background-color: #1a1919;
+  color: #dfdfdf;
+}
 .App {
   text-align: center;
   height: 100%;
@@ -37,7 +46,7 @@ html, body, #app, #app>div {
 
 .page-enter-active{
   opacity: 1;
-  transition : opacity 600ms, transform 600ms ease;
+  transition : opacity 300ms, transform 600ms ease;
 }
 
 .page-exit{
@@ -47,7 +56,7 @@ html, body, #app, #app>div {
 
 .page-exit-active{
   opacity: 0;
-  transition: opacity 600ms, transform 600ms ease;
+  transition: opacity 300ms, transform 600ms ease;
 }
 /* 
 .App-logo {

@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import { CSSTransition } from 'react-transition-group';
 import { Navbar, Nav } from 'react-bootstrap';
+import useDarkMode from 'use-dark-mode';
+import DarkModeToggle from 'react-dark-mode-toggle';
 
 import './App.css';
 
@@ -13,7 +15,7 @@ import GalleryPage from './pages/gallery-page/gallery.component';
 import ContactPage from './pages/contact-page/contact-page.component';
 
 const App = () => {
-
+  const darkMode = useDarkMode(false);
   // const [navBackground, setNavBackground] = useState(false);
 
   // const navRef = useRef();
@@ -33,30 +35,56 @@ const App = () => {
 
   const routes = [
     {path : '/', Component:HomePage, name : 'Ss'},
-    {path : '/reviews', Component:ReviewPage, name: "Write a review"},
     {path : '/about', Component:AboutPage, name:"About" },
+    {path : '/contact', Component:ContactPage, name:"Contact"},
     {path : '/gallery', Component:GalleryPage, name:"Gallery"},
-    {path : '/contact', Component:ContactPage, name:"Contact"}
+    {path : '/reviews', Component:ReviewPage, name: "Write a review"}
 
   ]
 
   return (
     <div className="App">
       <Router>
-          <Navbar className="main-nav" bg="transparent" fixed="top">
+          <Navbar className="main-nav" expand="md" bg="transparent" variant={darkMode.value ? "dark" : "light"} fixed="top">
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Nav>
               {
-                routes.map( route =>(
-                  <Nav.Link 
-                    key={route.path}
-                    as={NavLink}
-                    to={route.path}
-                    activeClassName='active'
-                    exact>
-                    {route.name}
-                  </Nav.Link>          
-                ))        
+                routes.map( (route, index) =>{
+                  if(index === 0){
+                    return(
+                      <Nav.Link 
+                        key={route.path}
+                        as={NavLink}
+                        to={route.path}
+                        activeClassName='active'
+                        exact>
+                        {route.name}
+                      </Nav.Link>          
+                    )
+                  }
+                  return(
+                    <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                      <Nav className="ml-auto nav-right">
+                        <Nav.Link
+                          key={route.path}
+                          as={NavLink}
+                          to={route.path}
+                          activeClassName='active'
+                          exact>
+                          {route.name}
+                        </Nav.Link>
+                      </Nav>
+                    </Navbar.Collapse>
+                  )
+                })        
               }
+              <Nav.Link>
+                <DarkModeToggle
+                onChange={darkMode.toggle}
+                checked={darkMode.value}
+                size={40}
+                />
+              </Nav.Link>
             </Nav>
           </Navbar>
       <div className='all-data' fluid>
@@ -72,7 +100,10 @@ const App = () => {
                     unmountOnExit
                   >
                     <div className='page'>
-                      <Component/>
+                      {/* {
+                        Component === AboutPage ? <Component darkMode={darkMode.value}/> : <Component/>
+                      } */}
+                      <Component darkMode={darkMode.value}/>
                     </div>
                   </CSSTransition>
                 )
