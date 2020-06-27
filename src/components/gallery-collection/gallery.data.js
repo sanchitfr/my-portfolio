@@ -14,7 +14,7 @@ const GALLERY_DATA = {
         
         },
         {
-            imageurl : "https://i.imgur.com/E9rNW8I.jpg"
+            imageurl : "https://i.imgur.com/DESY0D1.jpg"
         
         },
         {
@@ -83,10 +83,6 @@ const GALLERY_DATA = {
         },
         {
             imageurl : "https://i.imgur.com/uGYLVQs.jpg"
-        
-        },
-        {
-            imageurl : "https://i.imgur.com/Xvv0r7S.jpg"
         
         },
         {
@@ -178,7 +174,7 @@ const GALLERY_DATA = {
         
         },
         {
-            imageurl : "https://i.imgur.com/DESY0D1.jpg"
+            imageurl : "https://i.imgur.com/E9rNW8I.jpg"
         
         }    
     ]

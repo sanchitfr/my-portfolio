@@ -4,7 +4,7 @@ import GalleryCollection from '../../components/gallery-collection/gallery-colle
 
 
 const GalleryPage = () => (
-    <div>
+    <div className="gallery-page">
         <h1>Gallery</h1>
         <GalleryCollection/>
     </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import { BrowserRouter as Router,Route, NavLink } from 'react-router-dom';
-import { CSSTransition } from 'react-transition-group'
+import { CSSTransition } from 'react-transition-group';
 
 import './about-page.styles.scss';
 

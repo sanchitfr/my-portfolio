@@ -12,20 +12,22 @@ html, body, #app, #app>div {
   
 }
 
-.navbar-inner{
+
+/* .navbar-inner{
   background : transparent;
-}
-
-*{
+} */
+/* 
+ *{
   box-sizing: border-box;
-}
+} */
 
-.container{
+.all-data{
+  height: 100%;
   position: relative;
-}
+} 
 
 .page{
-  position: absolute;
+  height: 100%;
 }
 
 .page-enter{
@@ -35,7 +37,7 @@ html, body, #app, #app>div {
 
 .page-enter-active{
   opacity: 1;
-  transition : opacity 300ms, transform 300ms;
+  transition : opacity 600ms, transform 600ms ease;
 }
 
 .page-exit{
@@ -45,7 +47,7 @@ html, body, #app, #app>div {
 
 .page-exit-active{
   opacity: 0;
-  transition: opacity 300ms, transform 300ms;
+  transition: opacity 600ms, transform 600ms ease;
 }
 /* 
 .App-logo {

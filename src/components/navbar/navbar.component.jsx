@@ -4,7 +4,10 @@ import './navbar.styles.scss';
 import { Navbar, Nav } from 'react-bootstrap';
 
 
-const NavbarComponent = () => (
+const NavbarComponent = () => {
+    
+
+    return(
     <div>
         <Navbar className='navbar-custom' variant='light' fixed='top' expand='md'>
             <Navbar.Brand href="#home">
@@ -27,6 +30,6 @@ const NavbarComponent = () => (
             </Navbar.Collapse>
         </Navbar>
   </div>
-);
+)};
 
 export default NavbarComponent;
