@@ -4,11 +4,11 @@ import NavbarComponent from '../../components/navbar/navbar.component';
 
 
 
-const ContactPage = () => (
+const ProjectPage = () => (
     <div>
         <NavbarComponent/>
-        Contact Page
+        Projects Page
     </div>
 );
 
-export default ContactPage;
+export default ProjectPage;

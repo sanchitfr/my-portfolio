@@ -1,9 +1,9 @@
 .homepage{
     // color: white;
     height: 100%;
-    // background-image: url('../../images/background_1.jpg');
-    background-position: top;
     background-repeat: no-repeat;
+    background-position : right;
+    transition: 0.3s ease;
     background-size: cover;
     // background-color: #21D4FD;
     // background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
@@ -20,7 +20,16 @@
     //   padding-left: 0;
     //   border: none;
     // }
+  }
+.light{
+  background-image: url('../../images/wave.svg');
+  transition: 0.7s ease;   
+    // bottom: 0;
 }
+.dark{
+  background-image: url('../../images/wave2.svg');
+  transition: 0.7s ease;   
+}      
 @keyframes text-hover {
   0% { padding-top: 15%; }
   50% { padding-top : 16%; }

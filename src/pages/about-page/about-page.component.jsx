@@ -11,8 +11,9 @@ import About from '../../components/about/about.component';
 import Skills from '../../components/skills/skills.component';
 import Education from '../../components/education/education.component';
 import Hobbies from '../../components/hobbies/hobbies.component';
+import NavbarComponent from '../../components/navbar/navbar.component';
 
-const AboutPage = (darkMode) =>{ 
+const AboutPage = props =>{ 
     
 //     const [navBackground, setNavBackground] = useState(false);
 
@@ -37,9 +38,18 @@ const AboutPage = (darkMode) =>{
       {path : '/education', name:'Education', Component:Education},
       {path : '/hobbies', name:'Hobbies', Component:Hobbies}
   ]
+  const stylesToggle = {
+      color : () => {
+          if(props.darkMode){
+              return "white"
+          }
+          return "black"
+        }
+  }
 
     return(
-        <div className='about-page'>
+        <div className='about-page' styles={stylesToggle}>
+            <NavbarComponent/>
             <Router>
             <Row className='first-row'>
                 <Col sm={1}>
@@ -48,7 +58,7 @@ const AboutPage = (darkMode) =>{
                 <Col sm={1} className='about-nav'>
                     {
                         routes.map( route =>(
-                            <Navbar variant={darkMode ? "light" : "dark"}>
+                            <Navbar variant={props.darkMode ? "dark" : "light"}>
                                 <Nav>
                                     <Nav.Link 
                                         key={route.path}

@@ -6,6 +6,8 @@ import { Form, Row, Col, Container, Button } from 'react-bootstrap';
 import './review-page.styles.scss';
 import {reviewStart} from '../../redux/reviews/review.actions';
 import ReviewsCollection from '../../components/review-collection/review-collection.component';
+import NavbarComponent from '../../components/navbar/navbar.component';
+
 
 const ReviewPage = ({reviewStart}) => {
 
@@ -37,6 +39,7 @@ const ReviewPage = ({reviewStart}) => {
     
     return(
         <Container className='review-form'>
+            <NavbarComponent/>
             <Form onSubmit={handleSubmit} method="POST">
                 <Form.Group as={Row} controlId="formHorizontalName">
                     <Form.Label column sm={2}>

@@ -1,0 +1,139 @@
+
+.home-page{
+    font-family: Raleway;
+    justify-content: center;
+
+
+    .dark-mode-button{
+        padding-left: 10%;
+    }
+
+    .first-row{
+        background-position: right;
+        background-size: cover;
+        transition: 0.7s ease;   
+    }
+    
+    .light{
+        background-image: url('../../images/cool-background3.svg');
+    }
+    
+    .dark{
+        background-image: url('../../images/cool-background1.svg');
+
+        .project-container{
+        }
+    }
+    
+    
+    @keyframes text-hover {
+        0% { margin-top: 5%; }
+        50% { margin-top : 6%; }
+        100% { margin-top: 5%; }
+    }
+    
+    .home-banner{
+        width: 100%;
+        font-size: 30px;
+        position: relative;
+        margin-top: 5%;
+        padding-top: 0;
+        padding-right: 30%;
+        display: flex;
+        flex-direction: column;
+        animation: text-hover 3s;
+        animation-iteration-count: infinite;
+    }
+    
+    .row{
+        // background-color: red;
+        height: 300px;
+        padding: 0;
+        position: relative;
+    } 
+
+    .overlay{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: black;                       
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-position: top;
+    }
+    .second-row-first-col{
+        padding: 0;
+        .project-container{
+            cursor: pointer;
+            padding: 0;
+            height: 100%; 
+            transition: 0.7s;
+            .image{
+                height: 300px;
+            }   
+            .dark{
+                background-image: url('../../images/kiyun-lee-3PILPw4O80w-unsplash.jpg');
+            }
+        }
+        .project-container:hover .overlay{
+            opacity: 0.7;
+        } 
+    }     
+    .second-row-second-col{
+        padding: 0;
+        .contact-container{
+            cursor: pointer;
+            height: 100%;
+            padding: 0;
+            transition: 0.7s;
+        }
+        .contact-container:hover .overlay{
+            opacity: 0.7;
+        } 
+    } 
+    .contact{
+        height: 100%;
+    }
+
+    .gallery-container{
+        padding: 0;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    .gallery-container:hover .overlay{
+        opacity: 0.7;
+    } 
+
+    .review-container{
+        cursor: pointer;
+        padding: 0;
+    }
+    .review-container:hover .overlay{
+        opacity: 0.7;
+    }
+    .heading-text{
+        font-size: 30px;
+        font-weight: 500;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+    } 
+}
