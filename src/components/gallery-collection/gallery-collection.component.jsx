@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import { Carousel } from 'react-responsive-carousel';
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -30,13 +30,9 @@ const GalleryCollection = () => {
                     autoPlay>
                         {
                             landscapes.map(({imageUrl}) => 
-                                <div>
-                                    <img
-                                    className='carousel-images'
-                                    src={imageUrl}
-                                    alt="display"
-                                    />
-                                </div>
+                                // <div>
+                                    <Image src={imageUrl} alt="display" fluid />
+                                // </div>
                             )
                         }
                     </Carousel>
