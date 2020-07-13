@@ -1,7 +1,8 @@
 .project-item{
   width: 80%;
   height: 80vh;
-  margin-bottom: 10%;
+  padding: 0;
+  margin: 0 auto 10% auto;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
   overflow: hidden;
   position: relative;
@@ -46,6 +47,14 @@
     text-decoration: none;
     color: white;
     font-size: 2rem;
+  }
+
+
+  .project-link{
+    transition: transform 0.3s;
+  }
+  .project-link:hover{
+    transform: scale(1.1);
   }
   
 

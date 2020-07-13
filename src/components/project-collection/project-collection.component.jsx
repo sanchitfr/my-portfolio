@@ -2,6 +2,7 @@ import React from 'react';
 
 // import {Row} from 'react-bootstrap';
 
+import './project-collection.styles.scss'
 import ProjectItem from '../project-item/project-item.component';
 import PROJECT_DATA from './projectData';
 
