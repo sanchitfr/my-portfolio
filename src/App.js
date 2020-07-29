@@ -16,6 +16,7 @@ import HomePage2 from './pages/home-page2/home-page2.component';
 
 const App = () => {
   const darkMode = useDarkMode(false);
+
  
   // const [navBackground, setNavBackground] = useState(false);
 

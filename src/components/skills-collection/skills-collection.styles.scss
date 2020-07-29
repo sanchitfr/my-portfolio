@@ -1,10 +1,14 @@
-.skill-col{
-    transition: transform .1s;
-    
-    &:hover{
-        transform: scale(1.1);
-    }
-    a{
-        text-decoration: none !important;
+.skills-collection{
+    .skill-col{
+        transition: transform .1s;
+        height: 10%;
+        width: 10%;
+        &:hover{
+            transform: scale(1.1);
+        }
+        a{
+            text-decoration: none !important;
+        }
     }
 }
+

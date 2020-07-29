@@ -14,23 +14,6 @@ import Hobbies from '../../components/hobbies/hobbies.component';
 import NavbarComponent from '../../components/navbar/navbar.component';
 
 const AboutPage = props =>{ 
-    
-//     const [navBackground, setNavBackground] = useState(false);
-
-//   const navRef = useRef();
-//   navRef.current = navBackground;
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       const show = window.scrollY > 500;
-//       if(navRef.current !== show){
-//         setNavBackground(show);
-//       }
-//     }
-//     document.addEventListener('scroll', handleScroll);
-//     return () => {
-//       document.removeEventListener('scroll', handleScroll);
-//     }
-//   });
 
   const routes = [
       {path : '/about', name:'About', Component:About},
@@ -49,62 +32,68 @@ const AboutPage = props =>{
 
     return(
         <div className='about-page' styles={stylesToggle}>
-            <NavbarComponent/>
-            <Router>
-            <Row className='first-row'>
-                <Col sm={1}>
-                    <ContactLinkButtons className="contact-link"/>
-                </Col>
-                <Col sm={1} className='about-nav'>
-                    {
-                        routes.map( route =>(
-                            <Navbar variant={props.darkMode ? "dark" : "light"}>
-                                <Nav>
-                                    <Nav.Link 
-                                        key={route.path}
-                                        as={NavLink}
-                                        to={route.path}
-                                        activeClassName='active'
-                                        exact>
-                                    {route.name}
-                                    </Nav.Link>
-                                </Nav>
-                            </Navbar>
-                        ))
-                    }
-                <hr/>
-                </Col>
-                <Col sm={10}>
-                <Container className="container">
-                    {
-                        routes.map(({path, Component}) => (
-                            <Route key={path} exact path={path}>
+            <Container fluid>
+                <Row className="min-vh-100 flex-column flex-md-row">
+                    <NavbarComponent/>
+                    <Router>
+                    <Col className="bg-faded flex-grow-1">
+                        <h2 className="about-heading">About Me</h2>
+                        <Row className='first-row'>
+                            <Col className='about-nav'>
                                 {
-                                    (({match}) =>(
-                                        <CSSTransition
-                                        in={match != null}
-                                        timeout={300}
-                                        classNames="page"
-                                        unmountOnExit
-                                        >
-                                            <div className='page'>
-                                                <Component/>
-                                            </div>
-                                        </CSSTransition>
+                                    routes.map( route =>(
+                                        <Navbar variant={props.darkMode ? "dark" : "light"}>
+                                            <Nav>
+                                                <Nav.Link 
+                                                    key={route.path}
+                                                    as={NavLink}
+                                                    to={route.path}
+                                                    activeClassName='active'
+                                                    exact>
+                                                {route.name}
+                                                </Nav.Link>
+                                            </Nav>
+                                        </Navbar>
                                     ))
                                 }
-                            </Route>
-                        ))
-                    }
-                </Container>
-                </Col>
-            </Row>
-            </Router>
+                                <hr/>
+                            </Col>
+                            </Row>
+                            <Row className="second-row">
+                            <Col  className="contact-link" xs={1} sm={0}>
+                                <ContactLinkButtons/>
+                            </Col>
+                            <Col xs={11} sm={12}>
+                            <Container className="details-container" fluid>
+                                {
+                                    routes.map(({path, Component}) => (
+                                        <Route key={path} exact path={path}>
+                                            {
+                                                (({match}) =>(
+                                                    <CSSTransition
+                                                    in={match != null}
+                                                    timeout={300}
+                                                    classNames="page"
+                                                    unmountOnExit
+                                                    >
+                                                        <div className='page'>
+                                                            <Component/>
+                                                        </div>
+                                                    </CSSTransition>
+                                                ))
+                                            }
+                                        </Route>
+                                    ))
+                                }
+                            </Container>
+                            </Col>
+                        </Row>
+                    </Col>
+                    </Router>
+                </Row>
+            </Container>
         </div>
-        // <div className='vertical-nav'>
-        // </div>
-        // <Container className='body-container'>
-        // </Container>
+
     )
 };
 

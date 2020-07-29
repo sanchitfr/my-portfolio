@@ -39,11 +39,11 @@ const GalleryCollection = () => {
                 {/* </Col> */}
             {/* </Row> */}
                 <Row  className='images'>
-                    <Col className='image-col-img' md={4}>
+                    <Col className='image-col-img' xs={4}>
                         {
                             images.slice(0, 16).map(({imageurl}) => {
                                 return (
-                                    <div className='image-col'md={4}>
+                                    <div className='image-col'>
                                         <GalleryItem  imageUrl={imageurl}/>
                                     </div>
                                 )
@@ -51,7 +51,7 @@ const GalleryCollection = () => {
                             )
                         }
                     </Col>
-                    <Col className='image-col-img' md={4}>
+                    <Col className='image-col-img' xs={4}>
                         {
                             images.slice(16, 31).map(({imageurl}) => {
                                 return (
@@ -63,7 +63,7 @@ const GalleryCollection = () => {
                             )
                         }
                     </Col>
-                    <Col className='image-col-img' md={4}>
+                    <Col className='image-col-img' xs={4}>
                         {
                             images.slice(31, 46).map(({imageurl}) => {
                                 return (

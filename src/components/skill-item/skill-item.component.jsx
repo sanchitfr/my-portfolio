@@ -7,7 +7,7 @@ import { Image } from 'react-bootstrap';
 const SkillItem = ({ imageUrl, title }) => (
         <div className='skill-item'>
             <Image className='skill-logo' src={`${imageUrl}`} alt={`${title}`}/>
-            <h3> {title} </h3>
+            <div className="skill-title"> {title} </div>
         </div>
 );
 

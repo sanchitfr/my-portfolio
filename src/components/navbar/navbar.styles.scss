@@ -1,22 +1,35 @@
-.navbar-custom{
+.navbar{
+    padding: 0;
+}
+#main-nav{
     font-family: 'Raleway', sans-serif;
     // background: transparent !important;
         // background-color: black;
         color : white;
-    height:40px;
-    a{
-        span{
-            color: #000;
-        }
-        
-        &:hover{
-            text-decoration : none;
+        height:40px;
+        padding: 0;
+        a{
+            span{
+                color: #000;
+            }
+            
+            &:hover{
+                text-decoration : none;
+            }
         }
     }
+    
+    .contact-btns{
+        background: transparent;
+        height: 10px;
+    }
+    
+    .contact-btns .dark{
+        color: white;
+    }
+    
+    
+// @media only screen and (max-width: 415px){
 
-}
 
-.navbar.scrolled{
-    background: black!important;
-    transition: 500ms ease
-}
+// }

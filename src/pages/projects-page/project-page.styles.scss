@@ -1,0 +1,20 @@
+.project-page{
+    font-family: Raleway;
+
+    .project-data{
+        margin: 0 10%;
+    }
+
+    .heading{
+        font-size: 6vw;
+    }
+    .text{
+        font-size: 2vw;
+    }
+}
+
+@media only screen and (max-width: 415px){
+    .project-page .text{
+        font-size: 4vw;
+    }
+}

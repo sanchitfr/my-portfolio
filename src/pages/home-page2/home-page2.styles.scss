@@ -1,8 +1,4 @@
- @media only screen and (max-width: 415px){
-    .heading-text{
-        font-size: 18px;
-    }
-} 
+
 .home-page{
     font-family: Raleway;
     justify-content: center;
@@ -78,6 +74,9 @@
         object-fit: cover;
         background-position: top;
     }
+    img:hover{
+        transform: scale(1.1);
+    }
     .second-row-first-col{
         padding: 0;
         .project-container{
@@ -106,7 +105,7 @@
         }
         .contact-container:hover .overlay{
             opacity: 0.7;
-        } 
+        }
     } 
     .contact{
         height: 100%;
@@ -144,3 +143,44 @@
         // left: 50%;
     } 
 }
+
+@media only screen and (max-width: 415px){
+    .home-page{
+        margin: 0;
+    }
+    .home-page .overlay{
+        opacity: 1;
+        background: transparent;
+    }
+    .home-page .light{
+        .heading-text{
+          width: 100%;
+          background-color: rgba(0,0,0,0.6);
+        //   mix-blend-mode: overlay;
+       }
+    }
+
+    .home-page .dark{
+        .heading-text{
+            width: 100%;
+            background-color: rgba(255,255,255,0.75);
+            color: black;
+        }
+    }
+    // .heading-text{
+    //     width: 100%;
+    //    background-color: white;
+    //    mix-blend-mode: overlay;
+    //    color: black;
+    // }
+    .home-page .gallery-and-review-row{
+        height: 600px;
+    }
+    .home-page .gallery-container{
+        height: 300px;
+    }
+    .home-page .review-container{
+        width: 100%;
+        height: 300px;
+    }
+} 

@@ -29,3 +29,10 @@
     }
    
 }
+
+@media only screen and (max-width: 415px){
+    .gallery-collection .carousel{
+        width: 80vw;
+        height: 38vh;
+    }
+}

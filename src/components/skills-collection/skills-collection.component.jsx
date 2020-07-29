@@ -14,12 +14,12 @@ const SkillsCollection = () => {
     //     // window.location.assign(url)
     // }
     return (
-        <Container>
+        <Container className="skills-collection">
             <Fade left>
                 <Row>
                     {
                         skills.map(({ imageUrl, title, uid, url }) =>
-                            <Col /*onClick={(url) => handleClick(url)}*/ className='skill-col' sm={12} md={4} lg={3}>
+                            <Col /*onClick={(url) => handleClick(url)}*/ className='skill-col' xs={4} md={4} lg={3}>
                                 <a href={url} target="_blank" rel="noopener noreferrer"> 
                                     <SkillItem key={uid} imageUrl={imageUrl} title={title}/>
                                 </a>

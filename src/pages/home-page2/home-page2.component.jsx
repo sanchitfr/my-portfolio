@@ -16,7 +16,7 @@ const HomePage2 = props => {
     const contactImage = !props.darkMode ? 'https://images.unsplash.com/photo-1495899370433-cb0c74293fdf?ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80' : 'https://images.unsplash.com/photo-1567715610953-8be4eda430b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80';
     const reviewImage = !props.darkMode ? 'https://images.unsplash.com/photo-1503551723145-6c040742065b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80' : 'https://images.unsplash.com/photo-1478641300939-0ec5188d3802?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80';
     return(
-    <div className='home-page'>
+    <div className={`home-page ${props.darkMode ? "dark" : "light"}`}>
         <Row className={`first-row ${props.darkMode? 'dark' : 'light'}`}>
             <Col xs={1}>
                 <DarkModeToggle
@@ -36,21 +36,21 @@ const HomePage2 = props => {
             </Col>
         </Row>
         <Row className="second-row">
-            <Col md={8} className='second-row-first-col'>
+            <Col md={8}  className='second-row-first-col'>
                 <Row className='project-row'>
                     <a href="/projects">
-                        <Container className='project-container'>
-                            <div className='image'><Image src={projectImage} alt='project' fluid/></div>
-                            <div className="overlay">
-                                <div className='heading-text'>
-                                    Projects
+                            <Container className={`project-container ${props.darkMode? 'dark' : 'light'}`}>
+                                <div className='image'><Image src={projectImage} alt='project' fluid/></div>
+                                <div className="overlay">
+                                    <div className='heading-text'>
+                                        Projects
+                                    </div>
                                 </div>
-                            </div>
-                        </Container>
+                            </Container>
                     </a>
                 </Row>
                 <Row className='gallery-and-review-row'>
-                        <Col className='gallery-container'>
+                        <Col md={6} xs={12} className={`gallery-container ${props.darkMode? 'dark' : 'light'}`}>
                             <a href="/gallery">
                                 <Image src={galleryImage} alt='gallery' fluid/>
                                 <div className='overlay'>
@@ -58,17 +58,17 @@ const HomePage2 = props => {
                                 </div>
                             </a>
                         </Col>
-                        <Col className='review-container'>
+                        <Col md={6} xs={12} className={`review-container ${props.darkMode? 'dark' : 'light'}`}>
                             <a href="/reviews">
                                 <Image src={reviewImage} alt='review' fluid/>
                                 <div className='overlay'>
-                                    <div className='heading-text'>Review</div>
+                                    <div className='heading-text'>Feedback</div>
                                 </div>
                             </a>
                         </Col>
                 </Row> 
             </Col>
-            <Col md={4} className={`second-row-second-col ${props.darkMode? 'dark' : 'light'}`}>
+            <Col md={4} sm={12} className={`second-row-second-col ${props.darkMode? 'dark' : 'light'}`}>
                 <a href="/contact">
                     <Container className='contact-container'>
                         <Image src={contactImage} alt='contact' fluid/>

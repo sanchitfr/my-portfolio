@@ -3,23 +3,26 @@ html, body, #app, #app>div {
   overflow-x: hidden;
 }
 
-/* @media only screen and (max-width: 415px){
 
-} */
 
 body.light-mode {
-  background-color: #fff;
+  background-image:url("https://images.unsplash.com/photo-1528460033278-a6ba57020470?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80");
+  background-repeat: no-repeat;  
+  background-size: cover;
   color: #333;
   transition: background-color 0.3s ease;
 }
 body.dark-mode {
-  background-color: #1a1919;
+  background-image: url("https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #dfdfdf;
 }
 .App {
   text-align: center;
   height: 100%;
   position: absolute;
+  overflow-x: hidden;
   top: 0;
   bottom: 0;
   left: 0;
@@ -99,3 +102,10 @@ body.dark-mode {
     transform: rotate(360deg);
   }
 } */
+
+@media only screen and (max-width: 415px){
+  .App{
+    width: 100%;
+    overflow-x: hidden;
+  }
+}

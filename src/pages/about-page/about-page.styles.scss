@@ -2,47 +2,59 @@
 .about-page{
     height: 100%;
     width: 100%;
-    // overflow: hidden;
+    overflow-x: scroll;
     font-family: Raleway;
-    // background-image: url('../../images/particles.png');
+    // background-image: url('https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     text-decoration: none;
-    // background: #36D1DC;  /* fallback for old browsers */
-    // background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
-    // background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    // display: flex;
-    // flex-direction: row;
-
+    .container-fluid{
+        padding: 0;
+    }
 
     .contact-link{
+        display: none;
         padding-left: 0;
-        padding-top: 30px;
+        position: absolute;
+        top: 0;
         overflow: hidden;
     }
 
-    hr{
-        border: 0;
-        height: 1px;
-        background: #333;
-        margin-bottom: 100px;
-        background-image: linear-gradient(to right, #5B86E5, #333, #36D1DC);   
-    }
-
+    
     .about-nav{
-        padding: 0;
-       font-size: 20px;
-       display: flex;
-       flex-direction: column !important;
-       color: black;
-       justify-content: center;
+        padding: 0 50%;
+        position: relative;
+        bottom: 0;
+        font-size: 20px;
+        display: flex;
+        flex-direction: row !important;
+        color: black;
+        justify-content: center;
+        hr{
+            border: 1px solid;
+            height: 1px;
+            background: #333;
+            margin-bottom: 100px;
+            background-image: linear-gradient(to right, white, #333, black);   
+        }
 
     }
 
     .first-row{
-        height: 100%;
+        // height: 30%;
+        height: 10%;
+        margin: 0;
+        margin-top: 2%;
+        padding: 0 15%;
+        justify-content: center;
+    }
+
+    .second-row{
+        position: relative;
+        top: 5%;
+        height: 50%;
     }
     
     .container{
@@ -77,32 +89,34 @@
         transition: opacity 300ms, transform 300ms;
     }
     
-    .heading{
-        font-size: 50px;
-        margin-bottom: 25px;
+
+    .about-heading{
+        font-size : 6vw;
     }
-    
-    span{
-        font-size : 23px;
+    .about-text{
+        font-size: 2vw;
     }
-
-    // .vertical-nav{
-    //     padding-left: 2vw;
-    //     margin-top: 5vw;
-    //     border-right: 1px ;
-        
-    // }
-
-    // .body-container{
-    //     padding-top: 60px;
-    //     margin: 0 auto;
-    //     display: flex;
-    //     flex-direction: column;
-    // }
-
-
 }
 
-// .vertical-nav{
-
-// }
+@media only screen and (max-width: 415px){
+    .about-page{
+        width: 100vw;
+    }
+    .about-page .about-nav{
+        padding: 0 10%;
+        font-size: 4vw; 
+    }
+    .about-page .about-text{
+        font-size : 4vw
+    }
+    .about-page .first-row{
+        height: 5%;
+        margin: 0;
+        padding: 0 15%;
+        top: 20%;
+        justify-content: center;
+    }
+    .about-page .details-container{
+        width: 100%;
+    }
+}
