@@ -15,6 +15,11 @@
     i{
        margin-top: 20%;
     }
+
+    .contact-link{
+        text-decoration: none;
+        color: black;
+    }
 }
 .contact-item:hover {
     -ms-transform: scale(1.2);
@@ -29,8 +34,12 @@
 
 @media only screen and (max-width: 415px){
     .contact-item{
-        width: 30vw;
-        height: 35vh;
+        width: 35vw;
+        height: 30vh;
+    }
+
+    .contact-item i{
+        margin: 0;
     }
 
 }

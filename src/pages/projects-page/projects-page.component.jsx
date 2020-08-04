@@ -13,7 +13,7 @@ const ProjectPage = () => (
                 <NavbarComponent/>
                 <Col className="bg-faded p-0 flex-grow-1">
                     <div className="project-data">
-                        <h2 className="heading">PROJECTS</h2>
+                        <h2 className="heading">Projects</h2>
                         <p className="text">I have worked on the below mentioned projects which were made using react.js,
                         node.js, javaScript with the use of many other tools and databases inluding firebase, mongoDB,
                         redux, redux-sagas and many more. Below is the details of the said projects.</p>

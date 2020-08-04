@@ -5,7 +5,6 @@ import { CSSTransition } from 'react-transition-group';
 
 import './about-page.styles.scss';
 
-// import AboutNavigation from '../../components/vertical-nav/vertical-nav.component';
 import ContactLinkButtons from '../../components/contact-link-buttons/contact-link-buttons.component';
 import About from '../../components/about/about.component';
 import Skills from '../../components/skills/skills.component';
@@ -60,11 +59,8 @@ const AboutPage = props =>{
                             </Col>
                             </Row>
                             <Row className="second-row">
-                            <Col  className="contact-link" xs={1} sm={0}>
-                                <ContactLinkButtons/>
-                            </Col>
-                            <Col xs={11} sm={12}>
-                            <Container className="details-container" fluid>
+                            <Col xs={12}>
+                            <div className="details-container">
                                 {
                                     routes.map(({path, Component}) => (
                                         <Route key={path} exact path={path}>
@@ -85,7 +81,7 @@ const AboutPage = props =>{
                                         </Route>
                                     ))
                                 }
-                            </Container>
+                            </div>
                             </Col>
                         </Row>
                     </Col>

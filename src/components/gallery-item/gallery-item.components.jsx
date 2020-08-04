@@ -6,7 +6,7 @@ import './gallery-item.styles.scss';
 
 const GalleryItem = imageUrl => (
     <a href={imageUrl.imageUrl} target="_blank" rel="noopener noreferrer" >
-        <Image className='gallery-item' src={imageUrl.imageUrl}/>
+        <Image className='gallery-item' src={imageUrl.imageUrl} fluid/>
     </a>
 );  
 

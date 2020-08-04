@@ -27,7 +27,7 @@ const NavbarComponent = () => {
     ]
 
     return(
-      <aside className={`col-12 col-md-3 p-0 flex-shrink-1`}>
+      <aside className={`col-12 col-md-2 p-0 flex-shrink-1`}>
         <Navbar className="flex-md-column flex-row align-items-start py-2" bg="transparent" variant={darkMode.value ? "dark" : "light"}>
             <Navbar.Collapse>
             <ul className={`flex-md-column flex-row navbar-nav w-100 px-2 justify-content-between ${darkMode.value ? "dark" : "light"}`}>
@@ -49,9 +49,9 @@ const NavbarComponent = () => {
               }
                 <li>
                   <div className={`d-none d-md-inline contact-btns px-1 ${darkMode.value ? "dark" : "light"}`}>
-                    <a className="btn" target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/sanchitfr/'><i class="fab fa-linkedin"></i></a>
-                    <a className="btn" target="_blank" rel="noopener noreferrer" href='https://github.com/sanchitfr'><i class="fab fa-github-square"></i></a>
-                    <a className="btn" target="_blank" rel="noopener noreferrer" href='https://mail.google.com/mail/?view=cm&fs=1&to=sanchit522@gmail.com'><i class="fas fa-envelope"></i></a>
+                    <a id="btn-nav" target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/sanchitfr/'><i class="fab fa-linkedin"></i></a>
+                    <a id="btn-nav" target="_blank" rel="noopener noreferrer" href='https://github.com/sanchitfr'><i class="fab fa-github-square"></i></a>
+                    <a id="btn-nav" target="_blank" rel="noopener noreferrer" href='https://mail.google.com/mail/?view=cm&fs=1&to=sanchit522@gmail.com'><i class="fas fa-envelope"></i></a>
                   </div>
                 </li>
                 <li className='py-3 justify-content-center'>

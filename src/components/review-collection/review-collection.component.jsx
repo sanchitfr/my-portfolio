@@ -1,13 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import firebase from 'firebase/app';
-import {  ListGroup } from 'react-bootstrap';
+import { ListGroup } from 'react-bootstrap';
+import useDarkMode from 'use-dark-mode';
 
 import './review-collection.styles.scss';
 
 import ReviewItem from '../review-item/review-item.component';
 
 const ReviewsCollection = () => {
-    
+    const darkMode = useDarkMode(false);
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
@@ -15,11 +16,9 @@ const ReviewsCollection = () => {
         db.collection("reviews")
         .get().then(querySnapshot => {
             const data = querySnapshot.docs.map(doc => doc.data());
-            console.log("data", data)
             setReviews(data);
         });
     },[]);
-    console.log("outside", reviews);
     return (
         <div>
             <ListGroup className='review-list'>
@@ -27,7 +26,7 @@ const ReviewsCollection = () => {
                     // console.log("inside return", reviews)
                     // retrieveReviews().then(reviews => {
                         reviews.map(curr =>
-                            <ListGroup.Item className='review-list-item' md={12}>
+                            <ListGroup.Item className={`review-list-item ${darkMode.value ? "dark" : "light"}`} md={12}>
                                 <ReviewItem review={curr.review} name={curr.name}/>                                              
                             </ListGroup.Item>                 
                         )              

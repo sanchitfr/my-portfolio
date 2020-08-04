@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
 import { Form, Row, Col, Container, Button } from 'react-bootstrap';
@@ -15,21 +15,27 @@ const ReviewPage = ({reviewStart}) => {
         username : '',
         reviewDetail : ''
     });
-
     
+    
+    useEffect(() => {
+    }, [review]);
     const { username, reviewDetail } = review;
 
-    const handleSubmit = async event => {
-        event.preventDefault();
+    const addReview = () => {
         reviewStart({username, reviewDetail});
         setReview({
             username : '',
             reviewDetail : ''
-        })
+        });
     }
-
+    
+    
+    const handleSubmit = async event => {
+        event.preventDefault();
+        addReview();
+    }
+    
     const handleChange = event => {
-        // console.log(event.target);
         const { name, value } = event.target;
         setReview({
             ...review,
@@ -38,11 +44,12 @@ const ReviewPage = ({reviewStart}) => {
     }
     
     return(
-        <Container className='review-form' fluid>
+        <Container fluid>
             <Row className="min-vh-100 flex-column flex-md-row">
                 <NavbarComponent/>
-                <Col className="bg-faded flex-grow-1">
-                    <Form onSubmit={handleSubmit} method="POST">
+                <Col className="bg-faded flex-grow-1 review-form">
+                    <div className='heading'>Leave a feedback</div>
+                    <Form onSubmit={handleSubmit} >
                         <Form.Group as={Row} controlId="formHorizontalName">
                             <Form.Label column sm={2}>
                             Name

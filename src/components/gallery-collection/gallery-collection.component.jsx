@@ -1,17 +1,14 @@
 import React from 'react';
-import { Container, Row, Col, Image } from 'react-bootstrap';
-import { Carousel } from 'react-responsive-carousel';
+import { Container, Row, Col } from 'react-bootstrap';
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import './gallery-collection.styles.scss';
 import GALLERY_DATA from './gallery.data';
-import GALLERY_LANDSCAPES  from './gallery-only-landscape.data.js'
 import GalleryItem from '../gallery-item/gallery-item.components';
 
 const GalleryCollection = () => {
     // const [index, setIndex] = useState(0);
     const {images} = GALLERY_DATA;
-    const { landscapes } = GALLERY_LANDSCAPES;
     // const handleSelect = (selectedIndex, e) => {
     //     setIndex(selectedIndex);
     // };
@@ -19,23 +16,7 @@ const GalleryCollection = () => {
         <Container className='gallery-collection' fluid>
             {/* <Row>
                 <Col xs = {12}> */}
-                    <Carousel 
-                    className='carousel' 
-                    showThumbs={false} 
-                    showIndicators={false} 
-                    showStatus={false}
-                    infiniteLoop
-                    transitionTime={800}
-                    interval={5000}
-                    autoPlay>
-                        {
-                            landscapes.map(({imageUrl}) => 
-                                // <div>
-                                    <Image src={imageUrl} alt="display" fluid />
-                                // </div>
-                            )
-                        }
-                    </Carousel>
+                    
                 {/* </Col> */}
             {/* </Row> */}
                 <Row  className='images'>

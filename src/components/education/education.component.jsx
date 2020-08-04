@@ -7,7 +7,7 @@ import './education.styles.scss';
 import EducationCollection from '../education-collection/education-collection.component';
 
 const Education = () => (
-    <Row className='education'>
+    <Row id='education'>
         <Col xs={12}>
             <div className='about-heading'>Education</div>
                 <span className='about-text'> I started learning web development from a course which taught it from scratch, HTML elements, css classes and IDs,

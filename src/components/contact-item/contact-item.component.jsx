@@ -13,13 +13,15 @@ const ContactItem = props => {
     };
 
     return (
-        <div className={`contact-item ${props.color === "#d6249f" ? 'instagram' : null}`}>    
-            <Card style={background} className={`${props.color === "#d6249f" ? 'instagram' : null}`}>
-                <Card.Body>
-                    <i style={{"top" : "50%", "left":"50%", "margin-bottom":"30%"}} class={`${props.icon} fa-4x`} ></i>
-                    <Card.Title>{props.name}</Card.Title>
-                </Card.Body>
-            </Card>
+        <div className={`contact-item ${props.color === "#d6249f" ? 'instagram' : null}`}> 
+            <a target="_blank" rel="noopener noreferrer" className='contact-link' href={props.link}>   
+                <Card style={background} className={`${props.color === "#d6249f" ? 'instagram' : null}`}>
+                    <Card.Body>
+                        <i style={{"top" : "50%", "left":"50%", "margin-bottom":"30%"}} class={`${props.icon} fa-4x`} ></i>
+                        <Card.Title>{props.name}</Card.Title>
+                    </Card.Body>
+                </Card>
+            </a>
         </div>
 )};
 

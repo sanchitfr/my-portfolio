@@ -11,10 +11,10 @@ import ContactLinkButtons from '../../components/contact-link-buttons/contact-li
 const HomePage2 = props => {
     
     const darkMode = useDarkMode(false);
-    const projectImage = !props.darkMode ? 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80' : 'https://images.unsplash.com/photo-1543196614-e046c7d3d82e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=898&q=80';
-    const galleryImage = !props.darkMode ? 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80' : 'https://images.unsplash.com/photo-1506574723610-7fe0f0c7f9ea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80';
-    const contactImage = !props.darkMode ? 'https://images.unsplash.com/photo-1495899370433-cb0c74293fdf?ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80' : 'https://images.unsplash.com/photo-1567715610953-8be4eda430b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80';
-    const reviewImage = !props.darkMode ? 'https://images.unsplash.com/photo-1503551723145-6c040742065b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80' : 'https://images.unsplash.com/photo-1478641300939-0ec5188d3802?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=752&q=80';
+    const projectImage = !props.darkMode ? 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80' : 'https://images.unsplash.com/photo-1501876991173-f9c47cd28268?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1006&q=80';
+    const galleryImage = !props.darkMode ? 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80' : 'https://images.unsplash.com/photo-1567544515891-98d0afb8d944?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1055&q=80';
+    const contactImage = !props.darkMode ? 'https://images.unsplash.com/photo-1495899370433-cb0c74293fdf?ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80' : 'https://images.unsplash.com/photo-1593088681907-07879471ac1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80';
+    const reviewImage = !props.darkMode ? 'https://images.unsplash.com/photo-1503551723145-6c040742065b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80' : 'https://images.unsplash.com/photo-1587428598020-9ecf13caec01?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80';
     return(
     <div className={`home-page ${props.darkMode ? "dark" : "light"}`}>
         <Row className={`first-row ${props.darkMode? 'dark' : 'light'}`}>
