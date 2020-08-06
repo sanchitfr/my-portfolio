@@ -15,24 +15,15 @@ const ReviewPage = ({reviewStart}) => {
         username : '',
         reviewDetail : ''
     });
-    
-    
-    useEffect(() => {
-    }, [review]);
     const { username, reviewDetail } = review;
-
-    const addReview = () => {
+    
+    const handleSubmit = async event => {
+        event.preventDefault();
         reviewStart({username, reviewDetail});
         setReview({
             username : '',
             reviewDetail : ''
         });
-    }
-    
-    
-    const handleSubmit = async event => {
-        event.preventDefault();
-        addReview();
     }
     
     const handleChange = event => {

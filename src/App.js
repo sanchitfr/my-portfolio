@@ -42,7 +42,7 @@ const App = () => {
     {path : '/projects', Component:ProjectPage, name:"Projects" },
     {path : '/contact', Component:ContactPage, name:"Contact"},
     {path : '/gallery', Component:GalleryPage, name:"Gallery"},
-    {path : '/reviews', Component:ReviewPage, name: "Write a review"}
+    {path : '/reviews', Component:ReviewPage, name: "Feedback"}
   ]
 
   return (

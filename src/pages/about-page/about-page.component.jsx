@@ -5,7 +5,6 @@ import { CSSTransition } from 'react-transition-group';
 
 import './about-page.styles.scss';
 
-import ContactLinkButtons from '../../components/contact-link-buttons/contact-link-buttons.component';
 import About from '../../components/about/about.component';
 import Skills from '../../components/skills/skills.component';
 import Education from '../../components/education/education.component';
