@@ -87,10 +87,6 @@ const ReviewPage = ({reviewStart}) => {
                 </Col>
             </Row>       
         </Container>
-
-
-
-
     )
 };
 

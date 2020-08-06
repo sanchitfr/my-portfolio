@@ -3,8 +3,6 @@
     .review-list-item{
         transition: transform 0.4s;
         margin: 20px 0;
-        border: 1px solid black;
-        border-top-width: 1px;
         background: transparent;
         &:hover{
             transform : scale(1.1);

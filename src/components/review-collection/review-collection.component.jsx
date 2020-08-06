@@ -19,7 +19,7 @@ const ReviewsCollection = () => {
             setReviews(data);
         });
     },[]);
-    return (
+    return(
         <div>
             <ListGroup className='review-list'>
                 {
