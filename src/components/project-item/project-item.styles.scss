@@ -76,7 +76,7 @@
   top: 50%;
 }
 
-@media only screen and (max-width: 415px){
+@media only screen and (max-width: 480px){
 
   .project-item{
     box-shadow: none;
@@ -86,7 +86,7 @@
     display: none;
   }
   .project-item{
-    height: 85vh;
+    height: 120vw;
   }
   .project-item .project-overlay{
     opacity: 1;
