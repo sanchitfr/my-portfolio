@@ -3,8 +3,8 @@ const HOBBY_DATA = {
         {
             title : 'Photography',
             description : "Photography has been my hobby since 11th standard when I started clicking pictures on my mom's phone. I like to experiment with natural things, like leaves to the stars in the night sky. The best picture I have clicked would be that of the milky way galaxy for which we hiked in low temperatures and waited till 4am to click it. You can check out my pictures in the gallery section.",
-            darkImage : 'https://i.imgur.com/YCGkWZq.jpg',
-            lightImage : 'https://i.imgur.com/SLtSAOE.jpg',
+            darkImage : 'https://i.imgur.com/tFZ64p3.jpg',
+            lightImage : 'https://i.imgur.com/afqD4Kf.jpg',
         },
 
         {

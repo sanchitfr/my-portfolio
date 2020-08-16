@@ -15,9 +15,9 @@ const AboutPage = props =>{
 
   const routes = [
       {path : '/about', name:'About', Component:About},
-      {path : '/skills', name:'Skills', Component:Skills},
-      {path : '/education', name:'Education', Component:Education},
-      {path : '/hobbies', name:'Hobbies', Component:Hobbies}
+      {path : '/about/skills', name:'Skills', Component:Skills},
+      {path : '/about/education', name:'Education', Component:Education},
+      {path : '/about/hobbies', name:'Hobbies', Component:Hobbies}
   ]
   const stylesToggle = {
       color : () => {

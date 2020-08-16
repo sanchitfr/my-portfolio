@@ -22,7 +22,7 @@ const GalleryCollection = () => {
                 <Row  className='images'>
                     <Col className='image-col-img' xs={4}>
                         {
-                            images.slice(0, 16).map(({imageurl}) => {
+                            images.slice(0, 18).map(({imageurl}) => {
                                 return (
                                     <div className='image-col'>
                                         <GalleryItem  imageUrl={imageurl}/>
@@ -34,7 +34,7 @@ const GalleryCollection = () => {
                     </Col>
                     <Col className='image-col-img' xs={4}>
                         {
-                            images.slice(16, 31).map(({imageurl}) => {
+                            images.slice(18, 33).map(({imageurl}) => {
                                 return (
                                     <div className='image-col'>
                                         <GalleryItem imageUrl={imageurl}/>
@@ -46,7 +46,7 @@ const GalleryCollection = () => {
                     </Col>
                     <Col className='image-col-img' xs={4}>
                         {
-                            images.slice(31, 46).map(({imageurl}) => {
+                            images.slice(33, 46).map(({imageurl}) => {
                                 return (
                                     <div className='image-col'md={4}>
                                         <GalleryItem imageUrl={imageurl}/>

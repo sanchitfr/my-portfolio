@@ -27,7 +27,7 @@ const ReviewsCollection = () => {
                     // retrieveReviews().then(reviews => {
                         reviews.map(curr =>
                             <ListGroup.Item className={`review-list-item ${darkMode.value ? "dark" : "light"}`} md={12}>
-                                <ReviewItem review={curr.review} name={curr.name}/>                                              
+                                <ReviewItem review={curr.review} name={curr.name} key={curr.uid}/>                                              
                             </ListGroup.Item>                 
                         )              
                     // })

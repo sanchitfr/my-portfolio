@@ -2,12 +2,10 @@ import React from 'react';
 
 import './review-item.styles.scss';
 
-const ReviewItem = ({name, review, time}) => (
-    // console.log(reviewDat)
+const ReviewItem = ({name, review}) => (
     <blockquote className='review-item'>
         <i>{review}</i>
         <p>{name}</p>
-        <span>{time}</span>
     </blockquote>
 );
 

@@ -12,4 +12,20 @@
         width : 70vw;
         height: 80vh;
     }
+
+    img{
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 415px){
+    .gallery-page .carousel{
+        height: 35vh;
+        width: 70vw;
+    }
+
+    .gallery-page .carousel-images{
+        height: 35vh;
+        width: 70vw;
+    }
 }

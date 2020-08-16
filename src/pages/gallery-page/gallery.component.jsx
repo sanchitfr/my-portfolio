@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Image } from 'react-bootstrap';
+import ProgressiveImage from 'react-progressive-image';
 import { Carousel } from 'react-responsive-carousel';
 
 import './gallery.styles.scss';
@@ -19,7 +20,7 @@ const GalleryPage = () => {
             <Row className="min-vh-100 flex-column flex-md-row">
                 <NavbarComponent/>
                 <Col className="bg-faded flex-grow-1 gallery-banner">
-                    <h1>Gallery</h1>
+                    <h1 style={{marginBottom : '20px'}}>Gallery</h1>
                     <Carousel 
                     className='carousel' 
                     showThumbs={false} 
@@ -31,9 +32,10 @@ const GalleryPage = () => {
                     autoPlay>
                         {
                             landscapes.map(({imageUrl}) => 
-                                // <div>
-                                    <Image src={imageUrl} alt="display" fluid />
-                                // </div>
+                                <ProgressiveImage src={imageUrl} placeholder="tiny-image.jpg">
+                                    {src => <Image className='carousel-images' src={src} alt="display" fluid/>}
+                                </ProgressiveImage>
+                                    // <Image src={imageUrl} alt="display" fluid/>
                             )
                         }
                     </Carousel>

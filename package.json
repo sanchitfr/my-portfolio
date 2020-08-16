@@ -13,6 +13,7 @@
     "react-bootstrap": "^1.0.1",
     "react-dark-mode-toggle": "^0.0.5",
     "react-dom": "^16.13.1",
+    "react-progressive-image": "^0.6.0",
     "react-redux": "^7.2.0",
     "react-responsive-carousel": "^3.2.9",
     "react-reveal": "^1.2.2",

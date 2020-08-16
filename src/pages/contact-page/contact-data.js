@@ -27,7 +27,7 @@ const CONTACT_DATA = {
             icon : "fab fa-instagram",
             color : "#d6249f",
             name : "instagram",
-            link : ""
+            link : "https://www.instagram.com/sanchitfr/"
         }
     ] 
 };
