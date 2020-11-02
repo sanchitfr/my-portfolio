@@ -24,10 +24,11 @@ export const addReview = async ({username, reviewDetail}) => {
 export const retrieveReviews = async () => {
     const allReviews = [];
     const db = firebase.firestore();
-    await db.collection("reviews")
+    await db.collection("reviews").orderBy('time', 'desc')
     .get().then(querySnapshot => {
         querySnapshot.forEach(doc => {
             // console.log(doc.data());
+
             allReviews.push(doc.data());
         });
         console.log("from utils",allReviews);

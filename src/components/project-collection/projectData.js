@@ -1,6 +1,12 @@
 const PROJECT_DATA = {
     projects : [
         {
+            title: "Dev Connector",
+            description: "DevConnector is a MERN stack social networking application where developers from various communities can create their profiles, connect and share posts and comments. They can even link their github profile to show the latest repos in their github.",
+            imageUrl: "https://i.imgur.com/L1aQzt1.jpg",
+            link: "https://developers-connected.herokuapp.com/"
+        },
+        {
             title : "CRWN-Clothing",
             description : "This is an E-Commerce clothing application created using React.js, redux, redux-sagas and google firestore for handing the data base and user authentication. Users can sign up with email and sign in with google as well. It includes a payment simulation made using Stripe API.",
             imageUrl : "https://i.imgur.com/V3sHOvt.jpg",

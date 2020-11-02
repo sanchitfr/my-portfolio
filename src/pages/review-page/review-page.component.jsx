@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import { Form, Row, Col, Container, Button } from 'react-bootstrap';
 
 import './review-page.styles.scss';
-import {reviewStart} from '../../redux/reviews/review.actions';
+import {sendReview} from '../../redux/reviews/review.actions';
 import ReviewsCollection from '../../components/review-collection/review-collection.component';
 import NavbarComponent from '../../components/navbar/navbar.component';
 
 
-const ReviewPage = ({reviewStart}) => {
+const ReviewPage = ({sendReview}) => {
 
     const [ review, setReview ] = useState({
         username : '',
@@ -19,7 +19,7 @@ const ReviewPage = ({reviewStart}) => {
     
     const handleSubmit = async event => {
         event.preventDefault();
-        reviewStart({username, reviewDetail});
+        sendReview(review);
         setReview({
             username : '',
             reviewDetail : ''
@@ -90,8 +90,5 @@ const ReviewPage = ({reviewStart}) => {
     )
 };
 
-const mapDispatchToProps = dispatch => ({
-    reviewStart : review => dispatch(reviewStart(review))
-})
 
-export default connect(null, mapDispatchToProps)(ReviewPage);
+export default connect(null, {sendReview})(ReviewPage);

@@ -10,10 +10,9 @@ const Education = () => (
     <Row id='education'>
         <Col xs={12}>
             <div className='about-heading'>Education</div>
-                <span className='about-text'> I started learning web development from a course which taught it from scratch, HTML elements, css classes and IDs,
-                javaScript DOM manipulation and event listeners etc. We made a full fledged Yelp-like application complete with user login,
-                authentication and commenting system. After that I did two more courses in JavaScript and React.js and learnt the following
-                skills.     
+                <span className='about-text'> I've studied electrical engineering from Thapar University where I was fortunate
+                enough to work on various microcontrollers and processors. And incidently, that is how I was introduced to coding. I've been
+                a huge physics nerd thorughout my life pretty much because it made me question the existence of everything around me.
                 </span>                
             <Col xs={12}>
                 <EducationCollection/>

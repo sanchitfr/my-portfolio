@@ -5,7 +5,7 @@ import './review-item.styles.scss';
 const ReviewItem = ({name, review}) => (
     <blockquote className='review-item'>
         <i>{review}</i>
-        <p>{name}</p>
+        <p>-{name}</p>
     </blockquote>
 );
 

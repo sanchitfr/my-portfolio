@@ -1,32 +1,32 @@
-import React, {useState, useEffect} from 'react';
-import firebase from 'firebase/app';
+import React, {useEffect, Fragment} from 'react';
+import { connect } from 'react-redux';
+// import firebase from 'firebase/app';
 import { ListGroup } from 'react-bootstrap';
 import useDarkMode from 'use-dark-mode';
 
 import './review-collection.styles.scss';
 
 import ReviewItem from '../review-item/review-item.component';
+import Spinner from '../Spinner';
+import { fetchReviews } from '../../redux/reviews/review.actions';
 
-const ReviewsCollection = () => {
+const ReviewsCollection = ({ fetchReviews, reviews: {reviewCollection, loading} }) => {
     const darkMode = useDarkMode(false);
-    const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        const db = firebase.firestore();
-        db.collection("reviews")
-        .get().then(querySnapshot => {
-            const data = querySnapshot.docs.map(doc => doc.data());
-            setReviews(data);
-        });
-    },[]);
+        fetchReviews();
+    },[fetchReviews]);
+
     return(
+        loading ? <Fragment><Spinner/></Fragment>
+        :
         <div>
             <ListGroup className='review-list'>
                 {
                     // console.log("inside return", reviews)
                     // retrieveReviews().then(reviews => {
-                        reviews.map(curr =>
-                            <ListGroup.Item className={`review-list-item ${darkMode.value ? "dark" : "light"}`} md={12}>
+                        reviewCollection.map(curr =>
+                            <ListGroup.Item id='review-item' className={`review-list-item ${darkMode.value ? "dark" : "light"}`} md={12}>
                                 <ReviewItem review={curr.review} name={curr.name} key={curr.uid}/>                                              
                             </ListGroup.Item>                 
                         )              
@@ -38,4 +38,8 @@ const ReviewsCollection = () => {
     )
 };
 
-export default ReviewsCollection;
+const mapStateToProps = state => ({
+    reviews : state.reviews
+})
+
+export default connect(mapStateToProps, { fetchReviews })(ReviewsCollection);

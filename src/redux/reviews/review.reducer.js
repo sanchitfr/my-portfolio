@@ -1,25 +1,23 @@
-
+import { FETCH_REVIEWS, ADD_REVIEW } from './types';
 const INITIAL_STATE = {
-    name : '',
-    review : '',
-    error : null
+    reviewCollection : [],
+    loading: true
 }
 
 const reviewReducer = (state=INITIAL_STATE, action) => {
-    switch(action.type){
-        case "REVIEW_SUCCESS" :
+    const { type, payload } = action;
+    switch(type){
+        case FETCH_REVIEWS :
             return {
                 ...state,
-                name : action.payload.username,
-                review : action.payload.reviewDetail
+                reviewCollection : payload,
+                loading: false
             }
 
-        case "REVIEW_FAILURE" :
+        case ADD_REVIEW :
             return { 
                 ...state,
-                name : '',
-                review : '',
-                error : action.payload
+                loading: false
             }
 
         default : 

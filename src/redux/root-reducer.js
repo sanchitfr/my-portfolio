@@ -3,7 +3,7 @@ import { combineReducers } from 'redux';
 import reviewReducer from './reviews/review.reducer';
 
 const rootReducer = combineReducers({
-    review : reviewReducer
+    reviews : reviewReducer
 });
 
 export default rootReducer;
