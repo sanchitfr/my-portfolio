@@ -1,25 +1,9 @@
 .review-list{
     cursor: default;
     #review-item{
-        border-width: 3px 4px 3px 5px;
-        border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
-        transform: rotate(2deg);
-        border-color: black;
-        border-top-width: 3px;
-        border-radius: 0.2;
-        transition: transform 0.4s;
+        // box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         margin: 20px 0;
         background: transparent;
-        &:hover{
-            transform : scale(1.1);
-        }
-
-        .dark{
-            border-color: white;
-        }
+        border: none;
     }
-}
-
-.review-list .dark .review-list-item {
-    border-color: white;
 }
